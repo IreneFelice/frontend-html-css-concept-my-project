@@ -10,7 +10,10 @@ Table of Contents
 4. Areas
 4.1 Header
 4.2 Introduction
-etc.
+4.3 Work-articles
+4.4 Service-tiles
+4.5 Contact-form
+4.6 Footer
 5. Media Queries
 ////////////////////////*/
 
@@ -122,5 +125,14 @@ header {
 main h2 {
     color: var(--custom-purple);
 }
+
+/* ----------------- 4.3 Work-articles ------------- */
+
+/* ----------------- 4.4 Service-tiles ---------------- */
+
+/* ----------------- 4.5 Contact-form ----------------- */
+
+/* ----------------- 4.6 Footer ----------------------- */
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
