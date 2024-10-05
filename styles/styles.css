@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*////////////////////////
+Table of Contents
+1. Global Styles
+2. Typography
+3. Layout
+3.1 Reusables
+3.2 Other
+4. Areas
+4.1 Header
+4.2 Introduction
+etc.
+5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Merriweather, Roboto, "Times New Roman", serif;
+}
+
+:root {
+    --custom-purple: #5722CD;
+    --custom-blue: #4845E4;
+    --custom-pink: #ED4385;
+    /*standaard tekst:*/
+    --custom-default-black: #0C0C0C;
+    /*grote zwevende woorden:*/
+    --custom-purple-floating: #F2F0FF;
+    /*voor achtergrond projecten:*/
+    --custom-grey-light: #F3F6F9;
+    /*Voor de service-tegel tekst:*/
+    --custom-grey: #7A7A7A;
+}
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Merriweather, serif;
+}
+
+h1{
+    color: var(--custom-purple-floating);
+}
+
+p {
+    font-family: Roboto, serif;
+}
+
+input, button{
+    font-family: inherit;
+}
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    display: flex;
+    background-color: var(--custom-blue);
+    justify-content: center;
+}
+
+.header-inner-container{
+    flex-basis: 90rem;
+    display: flex;
+    flex-direction: column;
+
+}
+/*--------------------------------*/
+.nav-outer-container{
+    display: flex;
+    justify-content: end;
+}
+
+.nav-inner-container {
+    flex-basis: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+/*----------------------------------*/
+.header-content-outer-container{
+    flex-basis: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content-inner-container{
+    flex-basis: 50rem;
+    text-align: center;
+}
+
+.header-content-inner-container button{
+    font-family: Roboto, serif;
+    text-transform: uppercase;
+    color: var(--custom-purple-floating);
+    background-color: var(--custom-pink);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px 30px;
+}
+
+
+/* --------------- 4.2 Introduction ------------------- */
+
+main h2 {
+    color: var(--custom-purple);
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
