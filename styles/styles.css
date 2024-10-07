@@ -9,6 +9,7 @@ Table of Contents
 3.2 Other
 4. Areas
 4.1 Header
+    - navigation
 4.2 Introduction
 4.3 Work-articles
 4.4 Service-tiles
@@ -26,6 +27,10 @@ Table of Contents
 
 body {
     font-family: Merriweather, Roboto, "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    height: 100;
+    min-height: 100vh;
 }
 
 :root {
@@ -48,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Merriweather, serif;
 }
 
-h1{
+h1 {
     color: var(--custom-purple-floating);
 }
 
@@ -56,31 +61,56 @@ h2 {
     color: var(--custom-purple);
 }
 
-h3{
+h3 {
     color: var(--custom-default-black)
 }
 
-h4{
+h4 {
     color: var(--custom-purple)
 }
 
 p {
-    font-family: Roboto, serif;
+    font-family: Roboto, sans-serif;
 }
 
-input, button{
-    font-family: inherit;
-}
 
-a{
+
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+a {
     text-decoration: none;
     color: var(--custom-purple)
 
 }
 
-/* ------------------------------- 3. Layout --------------------------------------- */
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+}
 
-/* --------------- 3.1 Reusables ----------------------- */
+button {
+    font-family: inherit, Roboto, serif;
+    border: none;
+    box-shadow: 5px 7px 5px rgba(87, 34, 205, 0.9);
+    border-radius: 2rem;
+    padding: 1.35em 2.3em;
+
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--custom-purple-floating);
+    background-color: var(--custom-pink);
+    margin: 1em;
+}
+
+
+input {
+    font-family: inherit;
+    border: none;
+}
+
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -90,83 +120,121 @@ a{
 
 header {
     display: flex;
+    height: 94vh;
     background-color: var(--custom-blue);
     justify-content: center;
+    align-items: center;
 }
 
-.header-inner-container{
+.header-inner-container {
     flex-basis: 90rem;
     display: flex;
+    height: 94vh;
     flex-direction: column;
-
+    border: dashed 3px orangered;
 }
-/*--------------------------------*/
-.nav-outer-container{
+
+/*-------------navigation-------------------*/
+.nav-outer-container {
     display: flex;
     justify-content: end;
 }
 
 .nav-inner-container {
-    flex-basis: 600px;
+    flex-basis: 30rem;
+    height: 5.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     list-style: none;
+    padding: 25px 10px;
+    border: solid 3px pink;
 }
+
+.nav-inner-container a {
+    color: var(--custom-purple-floating);
+    font-family: Roboto, serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+
 /*----------------------------------*/
-.header-content-outer-container{
-    flex-basis: 20rem;
+.header-content-outer-container {
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    border: solid 3px lightgreen;
 }
 
-.header-content-inner-container{
-    flex-basis: 50rem;
+.header-content-inner-container {
+    flex-basis: 48em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+
+    border: solid 3px lightyellow;
+    position: relative;
+}
+
+.header-content {
     text-align: center;
+    border: dashed 3px red;
 }
 
-.header-content-inner-container button{
-    font-family: Roboto, serif;
-    text-transform: uppercase;
+.header-content h1{
+    padding: 1.7em 0.2em 0.6em 0.2em;
+    font-size: 2.85rem;
+}
+
+.header-content p{
     color: var(--custom-purple-floating);
-    background-color: var(--custom-pink);
-    border-radius: 20px;
-    margin: 20px;
-    padding: 10px 30px;
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding-bottom: 0.6em;
 }
 
+
+
+.header-content-inner-container .image-wrapper{
+    width: 4em;
+    border: solid 2px purple;
+    position: absolute;
+    bottom: -2em;
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
-.intro-outer-container{
-padding: 3rem;
+.intro-outer-container {
+    padding: 3rem;
 }
 
-.intro-inner-container{
+.intro-inner-container {
     text-align: center;
 }
 
-.intro-inner-container h2{
+.intro-inner-container h2 {
     padding: 0.5rem;
 }
 
-.intro-inner-container p{
+.intro-inner-container p {
     margin: 5rem 0 2rem 0;
 }
 
 
-
-
 /* ----------------- 4.3 Work-articles ------------- */
-.work-outer-container{
+.work-outer-container {
     background-color: var(--custom-grey-light);
     display: flex;
     justify-content: center;
     /*border: solid 2px orange;*/
 }
 
-.work-inner-container{
+.work-inner-container {
     display: flex;
     flex-basis: 80rem;
     flex-direction: column;
@@ -174,7 +242,7 @@ padding: 3rem;
     row-gap: 3rem;
 }
 
-.work-inner-container article{
+.work-inner-container article {
     display: flex;
     /*border: solid 2px purple;*/
     justify-content: space-between;
@@ -194,49 +262,45 @@ padding: 3rem;
     /*border: solid 2px red;*/
 }
 
-.image-wrapper{
-flex-grow: 1;
+.work-inner-container .image-wrapper {
+    flex-grow: 1;
     flex-shrink: 3;
     padding: 1rem;
 }
 
-.image-wrapper img{
-    width: 100%;
-    height: 100%;
-}
 
-.work-inner-container article:nth-of-type(even){
+.work-inner-container article:nth-of-type(even) {
     flex-direction: row-reverse;
 
 }
 
-.work-inner-container article:nth-of-type(even) div{
+.work-inner-container article:nth-of-type(even) div {
     /*padding boven, rechts, onder, links*/
     padding: 1rem 3rem 1rem 1rem;
 }
 
-.work-inner-container a{
+.work-inner-container a {
     text-transform: uppercase;
     font-family: Roboto, serif;
     font-weight: bold;
 }
 
 
-
-
 /* ----------------- 4.4 Service-tiles ---------------- */
 
 /* ----------------- 4.5 Contact-form ----------------- */
-.form-outer-container{
+.form-outer-container {
     background-color: var(--custom-blue);
+    display: flex;
 }
-
 
 
 /* ----------------- 4.6 Footer ----------------------- */
 
-footer{
+footer {
     background-color: var(--custom-default-black);
     color: white;
+    display: flex;
 }
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
