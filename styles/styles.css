@@ -52,6 +52,18 @@ h1{
     color: var(--custom-purple-floating);
 }
 
+h2 {
+    color: var(--custom-purple);
+}
+
+h3{
+    color: var(--custom-default-black)
+}
+
+h4{
+    color: var(--custom-purple)
+}
+
 p {
     font-family: Roboto, serif;
 }
@@ -60,6 +72,11 @@ input, button{
     font-family: inherit;
 }
 
+a{
+    text-decoration: none;
+    color: var(--custom-purple)
+
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -122,17 +139,104 @@ header {
 
 /* --------------- 4.2 Introduction ------------------- */
 
-main h2 {
-    color: var(--custom-purple);
+.intro-outer-container{
+padding: 3rem;
 }
 
+.intro-inner-container{
+    text-align: center;
+}
+
+.intro-inner-container h2{
+    padding: 0.5rem;
+}
+
+.intro-inner-container p{
+    margin: 5rem 0 2rem 0;
+}
+
+
+
+
 /* ----------------- 4.3 Work-articles ------------- */
+.work-outer-container{
+    background-color: var(--custom-grey-light);
+    display: flex;
+    justify-content: center;
+    /*border: solid 2px orange;*/
+}
+
+.work-inner-container{
+    display: flex;
+    flex-basis: 80rem;
+    flex-direction: column;
+    /*border: solid 3px greenyellow;*/
+    row-gap: 3rem;
+}
+
+.work-inner-container article{
+    display: flex;
+    /*border: solid 2px purple;*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.work-inner-container article > div {
+    flex-basis: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    flex-shrink: 1;
+    row-gap: 30px;
+    /*padding boven, rechts, onder, links*/
+    padding: 1rem 2rem 1rem 1rem;
+    /*border: solid 2px red;*/
+}
+
+.image-wrapper{
+flex-grow: 1;
+    flex-shrink: 3;
+    padding: 1rem;
+}
+
+.image-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+.work-inner-container article:nth-of-type(even){
+    flex-direction: row-reverse;
+
+}
+
+.work-inner-container article:nth-of-type(even) div{
+    /*padding boven, rechts, onder, links*/
+    padding: 1rem 3rem 1rem 1rem;
+}
+
+.work-inner-container a{
+    text-transform: uppercase;
+    font-family: Roboto, serif;
+    font-weight: bold;
+}
+
+
+
 
 /* ----------------- 4.4 Service-tiles ---------------- */
 
 /* ----------------- 4.5 Contact-form ----------------- */
+.form-outer-container{
+    background-color: var(--custom-blue);
+}
+
+
 
 /* ----------------- 4.6 Footer ----------------------- */
 
-
+footer{
+    background-color: var(--custom-default-black);
+    color: white;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
