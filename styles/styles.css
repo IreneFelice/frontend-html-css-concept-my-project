@@ -29,7 +29,7 @@ body {
     font-family: Merriweather, Roboto, "Times New Roman", serif;
     display: flex;
     flex-direction: column;
-    height: 100;
+    height: 100vh;
     min-height: 100vh;
 }
 
@@ -116,9 +116,11 @@ input {
 
 /* --------------- 4.1 Header ------------------------- */
 
+/* ------- @ MOBILE ----------- */
 header {
     display: flex;
-    height: 94vh;
+/*    flex-grow: 1;*/
+    min-height: 65vh;
     background-color: var(--custom-blue);
     justify-content: center;
     align-items: center;
@@ -127,36 +129,43 @@ header {
 .header-inner-container {
     flex-basis: 90rem;
     display: flex;
-    height: 94vh;
+    height: 100%;
     flex-direction: column;
     /*border: dashed 3px orangered;*/
 }
+/* ----- @ --------------- */
+
+
 
 /*-------------navigation-------------------*/
+/* ---------- @ MOBILE --------------*/
 .nav-outer-container {
     display: flex;
     justify-content: end;
 }
 
 .nav-inner-container {
-    flex-basis: 30rem;
-    height: 5.5rem;
+    flex-basis: 55rem;
+    height: 4.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-    padding: 25px 10px;
+    padding: 1rem;
+    margin-top: 5rem;
     /*border: solid 3px pink;*/
 }
+
 
 .nav-inner-container a {
     color: var(--custom-purple-floating);
     font-family: Roboto, serif;
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
+/* ----------- @ ---------------------*/
 
 /*----------------------------------*/
 .header-content-outer-container {
@@ -182,18 +191,27 @@ header {
     /*border: dashed 3px red;*/
 }
 
+/* ------ @ MOBILE ----------*/
 .header-content h1 {
-    padding: 1.7em 0.2em 0.6em 0.2em;
-    font-size: 2.85rem;
+    padding: 3em 0.5em 0.6em 0.5em;
+    font-size: 4rem;
 }
 
 .header-content p {
     color: var(--custom-purple-floating);
-    font-size: 1.75rem;
+    font-size: 3.2rem;
     font-weight: 300;
-    padding-bottom: 0.6em;
+    padding: 0.5em 0.5em 1em 0.5em;
 }
 
+.header-content button {
+    font-size: 1.6em;
+    border-radius: 5.6em;
+    box-shadow: 10px 17px 7px rgba(87, 34, 205, 0.9);
+    padding: 1.5em 2.5em;
+}
+
+/* -------------- @ --------------------- */
 
 .header-content-inner-container .image-wrapper {
     width: 4em;
@@ -239,27 +257,24 @@ header {
     display: flex;
     flex-basis: 80rem;
     flex-direction: column;
+    row-gap: 6rem;
     /*border: solid 3px greenyellow;*/
-    row-gap: 3rem;
 }
 
 .work-inner-container article {
     display: flex;
-    /*border: solid 2px purple;*/
-    justify-content: space-between;
     align-items: center;
+    /*border: solid 2px purple;*/
 }
 
 .work-inner-container article > div {
     flex-basis: 20rem;
-    height: 20rem;
     display: flex;
     flex-direction: column;
     flex-grow: 3;
     flex-shrink: 1;
-    row-gap: 30px;
-    padding: 2rem;
-
+    row-gap: 50px;
+    padding: 4rem;
     /*border: solid 2px red;*/
 }
 
@@ -271,7 +286,7 @@ header {
     flex-grow: 1;
     flex-shrink: 3;
     max-width: 50vw;
-    box-shadow: 2px 2px 2px rgba(64, 62, 62, 90);
+    box-shadow: 2px 6px 7px rgba(64, 62, 62, 10);
 }
 
 .image-wrapper {
@@ -285,9 +300,7 @@ header {
 
 .work-inner-container article:nth-of-type(even) {
     flex-direction: row-reverse;
-
 }
-
 
 .work-inner-container a {
     text-transform: uppercase;
@@ -331,7 +344,6 @@ header {
 
 .service-inner-container article p {
     color: var(--custom-grey);
-
 }
 
 /* ----------------- 4.5 Contact-form ----------------- */
@@ -388,7 +400,7 @@ form input {
     padding-left: 0.8rem;
 }
 
-form textarea{
+form textarea {
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.8rem 0.8rem;
@@ -412,3 +424,68 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+/* ---------- STANDARD DESKTOP ----------*/
+
+@media screen and (min-width: 1200px) {
+    /* ------ @ header -------------*/
+    header {
+        /*display: flex;*/
+        height: 94vh;
+        /*background-color: var(--custom-blue);*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
+    }
+
+    .header-inner-container {
+        /*flex-basis: 90rem;*/
+        /*display: flex;*/
+        height: 94vh;
+        /*flex-direction: column;*/
+        /*border: dashed 3px orangered;*/
+    }
+
+    .header-content h1 {
+        padding: 1.7em 0.8rem 0.6em 0.8rem;
+        font-size: 2.85rem;
+    }
+
+    .header-content p {
+        color: var(--custom-purple-floating);
+        font-size: 1.75rem;
+        /*font-weight: 300;*/
+        padding-bottom: 0.6em;
+    }
+
+    /* -------- @ navigation -----------*/
+    .nav-inner-container {
+        flex-basis: 30rem;
+        height: 5.5rem;
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        justify-content: space-around;
+        /*align-items: center;*/
+        /*list-style: none;*/
+        /*padding: 1rem;*/
+        margin-top: 0.25rem;
+        /*border: solid 3px pink;*/
+    }
+
+    .nav-inner-container a {
+        /*color: var(--custom-purple-floating);*/
+        /*font-family: Roboto, serif;*/
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+
+    /* ----------- @ header button ------------- */
+    .header-content button {
+        font-size: 1rem;
+        border-radius: 2rem;
+        box-shadow: 5px 7px 5px rgba(87, 34, 205, 0.9);
+        padding: 1.35em 2.3em;
+    }
+}
+
+
+
