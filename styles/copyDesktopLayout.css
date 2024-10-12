@@ -136,18 +136,17 @@ header {
 .nav-outer-container {
     display: flex;
     justify-content: end;
-    flex-grow: 2;
-    /*border: solid 4px rebeccapurple;*/
 }
 
 .nav-inner-container {
-    flex-basis: 60%;
+    flex-basis: 30rem;
+    height: 5.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    padding: 2rem 0.5rem;
+    padding: 25px 10px;
     /*border: solid 3px pink;*/
 }
 
@@ -155,62 +154,52 @@ header {
     color: var(--custom-purple-floating);
     font-family: Roboto, serif;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
-/*-----------/end nav -----------------------*/
 
-
-/*!* --- header content-container: -----------------
- -----[text aka 'content'], button, squiggle ---------- *!*/
-
+/*----------------------------------*/
 .header-content-outer-container {
     display: flex;
     height: 100%;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     /*border: solid 3px lightgreen;*/
-    position: relative;
 }
 
 .header-content-inner-container {
-    flex-basis: 80%;
-    width: 70%;
+    flex-basis: 48em;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
     font-size: 1.2rem;
-    /*border: solid 6px yellow;*/
+    position: relative;
 }
 
-/*.header-content {*/
-/*    text-align: center;*/
-/*    height: 100%;*/
-/*    !*border: dashed 3px red;*!*/
-/*}*/
+.header-content {
+    text-align: center;
+    /*border: dashed 3px red;*/
+}
 
-.header-content-inner-container h1 {
-    padding: 1.2em 0.2em 1.6em 0.2em;
+.header-content h1 {
+    padding: 1.7em 0.2em 0.6em 0.2em;
     font-size: 2.85rem;
 }
 
-.header-content-inner-container p {
+.header-content p {
     color: var(--custom-purple-floating);
     font-size: 1.75rem;
     font-weight: 300;
-    padding-bottom: 1em;
+    padding-bottom: 0.6em;
 }
 
 
 .header-content-inner-container .image-wrapper {
-    width: 8vw;
-    height: 18vh;
+    width: 4em;
     /*border: solid 2px purple;*/
     position: absolute;
-    bottom: -4em;
+    bottom: -13em;
 }
 
 
@@ -256,15 +245,14 @@ header {
 
 .work-inner-container article {
     display: flex;
-
     /*border: solid 2px purple;*/
     justify-content: space-between;
     align-items: center;
 }
 
 .work-inner-container article > div {
-    flex-basis: 30em;
-    height: 10rem;
+    flex-basis: 20rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     flex-grow: 3;
@@ -279,18 +267,20 @@ header {
     font-size: 2rem;
 }
 
-.work-inner-container article .image-wrapper {
-    flex-grow: 0;
-    flex-shrink: 2;
+.work-inner-container .work {
+    flex-grow: 1;
+    flex-shrink: 3;
+    max-width: 50vw;
     box-shadow: 2px 2px 2px rgba(64, 62, 62, 90);
-    flex-basis: 40em;
+}
+
+.image-wrapper {
+    width: 100%;
     height: 100%;
 }
 
 .squiggle {
-    width: 10px;
-    flex-shrink: 5;
-
+    width: 40px;
 }
 
 .work-inner-container article:nth-of-type(even) {
@@ -319,8 +309,6 @@ header {
     gap: 2px 2px;
 }
 
-
-
 .service-inner-container article {
     flex-basis: 350px;
     display: flex;
@@ -332,9 +320,9 @@ header {
     box-shadow: 5px 7px 10px rgba(87, 34, 205, 0.1);
 }
 
-.service-inner-container article .image-wrapper {
-    max-width: 100px;
-    max-height: 100px;
+.icon {
+    width: 100px;
+    height: 100px;
 }
 
 .service-inner-container article h4 {
@@ -374,7 +362,7 @@ header {
 }
 
 form {
-    width: 100%;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -424,8 +412,6 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
-@media screen and (max-width: 992px){
-header{
-    background-color: yellow;
-}
+@media screen and (min-width: 1200px){
+
 }
